@@ -39,6 +39,8 @@ from src.account_manager.account_manager import AccountManager
 from src.account_manager.account_config import AccountConfig
 from src.account_manager.account_auth import AccountAuth
 
+from src.aim_training import start_training
+
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 os.system(f"title VALORANT rank yoinker v{version}")
@@ -69,6 +71,9 @@ try:
 
     # OS Logging
     log(f"Operating system: {get_os()}\n")
+
+    # Training
+    start_training()
     
     try:
         if len(sys.argv) > 1 and sys.argv[1] == "--config":
